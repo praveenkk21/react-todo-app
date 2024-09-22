@@ -13,6 +13,10 @@ export default function Counter() {
         setCount(count-1);
         //console.log("clicked");
     }
+    function counterButtonClear(){
+        setCount(0);
+        //console.log("clicked");
+    }
 
     return (
       <div className="Counter">
@@ -20,6 +24,9 @@ export default function Counter() {
         <div>
             <button className="counterButton" onClick={counterButtonIncrement}>+1</button>
             <button className="counterButton" onClick={counterButtonDecrement}>-1</button>
+        </div>
+        <div>
+            <button className="counterButtonClear" onClick={counterButtonClear}>Clear</button>
         </div>
       </div>
     );
