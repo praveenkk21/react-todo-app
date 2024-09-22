@@ -41,3 +41,9 @@ export function App() {
 
 Best practices:
 Move each component to separate folder
+
+Hooks:
+const [count,setCount]=useState(0);
+setCount(count+1);
+useState(0) will be having array of 2 elements.
+first one initial value and second one is function
