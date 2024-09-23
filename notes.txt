@@ -1,3 +1,12 @@
+npm -v
+npx -v
+node -v
+
+node modules will be adede to the path after npm install <package>
+
+npm - node package manager, used to manage all dependencies
+npx - node package executor
+
 npm - node package manager, used to manage all dependencies
 npx - node package executor
 
@@ -41,6 +50,13 @@ export function App() {
 
 Best practices:
 Move each component to separate folder
+
+part of Component:
+1. View - JSX
+2. Logic - JS
+3. Styling - CSS
+4. State - Internal data store
+5. Props - Pass Data
 
 Hooks:
 const [count,setCount]=useState(0);
