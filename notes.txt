@@ -1,0 +1,65 @@
+npm -v
+npx -v
+node -v
+
+node modules will be adede to the path after npm install <package>
+
+npm - node package manager, used to manage all dependencies
+npx - node package executor
+
+npm - node package manager, used to manage all dependencies
+npx - node package executor
+
+npm init - initialization of npm, it will create package.json
+
+To create React app:
+    npx create-react-app todo-app 
+    cd todo-app
+    npm start
+
+JSX- javascript executor
+   Stricter than HTML
+   start and ending tag should be proper
+   multiple tagss should be wrapped with <> </>
+
+JSX - In older browser, babel enables to convert to modern javascript
+ES - Ecmascript
+
+import './App.css';
+import  {LearningComponent} from './components/learning-examples/LearningComponent'
+
+function App() {
+  return (
+    <div className="App">
+      <b>The praveen's Application</b>
+      <LearningComponent/>
+    </div>
+  );
+}
+
+export default App; --> no need to mention near import {}
+
+export function App() {
+  return (
+    <div className="App">
+      <b>The praveen's Application</b>
+      <LearningComponent/>
+    </div>
+  );
+}
+
+Best practices:
+Move each component to separate folder
+
+part of Component:
+1. View - JSX
+2. Logic - JS
+3. Styling - CSS
+4. State - Internal data store
+5. Props - Pass Data
+
+Hooks:
+const [count,setCount]=useState(0);
+setCount(count+1);
+useState(0) will be having array of 2 elements.
+first one initial value and second one is function

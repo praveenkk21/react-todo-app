@@ -1,6 +1,5 @@
 {
-
-  "name": "todo-app",
+  "name": "todo-app-2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +10,9 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
