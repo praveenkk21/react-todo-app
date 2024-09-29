@@ -63,3 +63,41 @@ const [count,setCount]=useState(0);
 setCount(count+1);
 useState(0) will be having array of 2 elements.
 first one initial value and second one is function
+
+Props:
+export default function CounterButton({by,incrementMethod,decrementMethod}) {
+    return (
+    <div className="Counter">
+        <div>
+            <button className="counterButton" onClick={()=>incrementMethod(by)}>+{by}</button>
+            <button className="counterButton" onClick={()=>decrementMethod(by)}>-{by}</button>
+        </div>
+    </div>
+    );
+  }
+----------------------------------------------------
+export default function Counter() {
+
+    const [count,setCount]=useState(0);
+
+    function counterButtonIncrement(by){
+        setCount(count+by);
+           }
+    function counterButtonDecrement(by){
+        setCount(count-by);
+           }
+    function counterButtonClear(){
+        setCount(0);
+           }
+  return (
+      <div className="Counter">
+        <span className="count">{count}</span>
+            <CounterButton by={1} incrementMethod={counterButtonIncrement} decrementMethod={counterButtonDecrement}/>
+            <CounterButton by={2} incrementMethod={counterButtonIncrement} decrementMethod={counterButtonDecrement}/>
+            <CounterButton by={5} incrementMethod={counterButtonIncrement} decrementMethod={counterButtonDecrement}/> 
+            <button className="counterButtonClear" onClick={counterButtonClear}>Reset</button>     
+      </div>
+    );
+}
+
+

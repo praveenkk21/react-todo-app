@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import './Counter.css'
+import CounterButton from './CounterButton'
 
-export default function Counter({by}) {
+export default function Counter() {
 
-    const [count,setCount]=useState(1);
+    const [count,setCount]=useState(0);
 
-    function counterButtonIncrement(){
+    function counterButtonIncrement(by){
         setCount(count+by);
            }
-    function counterButtonDecrement(){
+    function counterButtonDecrement(by){
         setCount(count-by);
            }
     function counterButtonClear(){
@@ -18,13 +19,12 @@ export default function Counter({by}) {
     return (
       <div className="Counter">
         <span className="count">{count}</span>
-        <div>
-            <button className="counterButton" onClick={counterButtonIncrement}>+{by}</button>
-            <button className="counterButton" onClick={counterButtonDecrement}>-{by}</button>
-        </div>
-        <div>
-            <button className="counterButtonClear" onClick={counterButtonClear}>Clear</button>
-        </div>
-      </div>
+            <CounterButton by={1} incrementMethod={counterButtonIncrement} decrementMethod={counterButtonDecrement}/>
+            <CounterButton by={2} incrementMethod={counterButtonIncrement} decrementMethod={counterButtonDecrement}/>
+            <CounterButton by={5} incrementMethod={counterButtonIncrement} decrementMethod={counterButtonDecrement}/> 
+            <button className="counterButtonClear" onClick={counterButtonClear}>Reset</button>     
+     </div>
     );
 }
+
+
