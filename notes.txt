@@ -65,6 +65,20 @@ useState(0) will be having array of 2 elements.
 first one initial value and second one is function
 
 Props:
+In return - we can add properties to function
+<Counter proeprty1="1" property2="2"/>
+
+#old
+function Counter(proeprties){
+console.log(properties.property1);
+}
+
+#new - modern
+function Counter({proeprty1,proeprty2}){
+console.log(property1);
+}
+
+
 export default function CounterButton({by,incrementMethod,decrementMethod}) {
     return (
     <div className="Counter">
